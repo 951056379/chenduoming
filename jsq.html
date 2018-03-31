@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<title>简易计算器</title> 
+<script>  
+function getResult(type){ 
+
+var  result,数字1,数字2
+  数字1=parseInt(document.jisuanqi.数字1.value); 
+  数字2=parseInt(document.jisuanqi.数字2.value); 
+ 
+ 
+switch(type){ 
+case " + ": 
+result =数字1+数字2; 
+break; 
+case " - ": 
+result =数字1-数字2; 
+break; 
+case " * ": 
+result =数字1*数字2; 
+break; 
+case " / ": 
+result =数字1/数字2; 
+break;
+
+if(no2!=0)
+result=num1/num2;
+ else
+result="除数不能为0，请您重新输入！";
+break; 
+
+} 
+document.jisuanqi.result.value=result; 
+} 
+</script> 
+</head> 
+<body> 
+
+<form name="jisuanqi"> 
+数字1:<input name="数字1" />
+数字2:<input name="数字2" />
+  <input type="button" value="+" onclick="getResult(' + ')" /> 
+  <input type="button" value="-" onclick="getResult(' - ')" /> 
+  <input type="button" value="*" onclick="getResult(' * ')" /> 
+  <input type="button" value="/" onclick="getResult(' / ')" /> 
+  输出结果:<input name="result" /> 
+
+  </form> 
+ 
+</body> 
+</html>
